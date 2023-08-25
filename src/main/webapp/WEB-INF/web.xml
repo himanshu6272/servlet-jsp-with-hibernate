@@ -1,0 +1,171 @@
+<web-app>
+    <servlet>
+        <servlet-name>userController</servlet-name>
+        <servlet-class>controllers.UserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userController</servlet-name>
+        <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+<servlet>
+        <servlet-name>addressController</servlet-name>
+        <servlet-class>controllers.AddressController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addressController</servlet-name>
+        <url-pattern>/addressServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>controllers.AuthController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>controllers.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>viewServlet</servlet-name>
+        <servlet-class>controllers.ViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>viewServlet</servlet-name>
+        <url-pattern>/viewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteUSerServlet</servlet-name>
+        <servlet-class>controllers.DeleteUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteUSerServlet</servlet-name>
+        <url-pattern>/deleteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>adminServlet</servlet-name>
+        <servlet-class>controllers.adminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminServlet</servlet-name>
+        <url-pattern>/adminServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>forgotServlet</servlet-name>
+        <servlet-class>controllers.ForgotPasswordController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>forgotServlet</servlet-name>
+        <url-pattern>/forgotServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>resetServlet</servlet-name>
+        <servlet-class>controllers.ResetPasswordController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>resetServlet</servlet-name>
+        <url-pattern>/resetServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteAddress</servlet-name>
+        <servlet-class>controllers.DeleteAddressServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteAddress</servlet-name>
+        <url-pattern>/deleteAddress</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>validationFilter</filter-name>
+        <filter-class>controllers.ValidationServlet</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>validationFilter</filter-name>
+        <url-pattern>/registerServlet</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>myFilter</filter-name>
+        <filter-class>controllers.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>myFilter</filter-name>
+        <url-pattern>/view.jsp </url-pattern>
+        <url-pattern>/admin.jsp </url-pattern>
+    </filter-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error_404.jsp</location>
+    </error-page>
+
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <jsp-file>/register.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <jsp-file>/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>reset</servlet-name>
+        <jsp-file>/reset.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>reset</servlet-name>
+        <url-pattern>/reset</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>forgot</servlet-name>
+        <jsp-file>/forgot.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>forgot</servlet-name>
+        <url-pattern>/forgot</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>view</servlet-name>
+        <jsp-file>/view.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>view</servlet-name>
+        <url-pattern>/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>admin</servlet-name>
+        <jsp-file>/admin.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>admin</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+</web-app>
